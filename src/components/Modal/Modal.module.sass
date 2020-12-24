@@ -1,0 +1,68 @@
+.Modal
+  display: flex
+  position: fixed
+  justify-content: space-between
+  border: none
+  padding: 30px
+  max-width: 560px
+  width: 100%
+  max-height: 365px
+  height: 100%
+  margin: 5% auto
+  left: 0
+  right: 0
+  z-index: 3
+  .LeftBlock, .RightBlock, form
+    display: flex
+    flex-direction: column
+  .LeftBlock
+    justify-content: space-between
+    max-width: 330px
+    width: 100%
+    .ImageContainer
+      max-width: 330px
+      img
+        width: 100%
+    form
+      justify-content: space-between
+      height: 100%
+      margin-top: 30px
+    input
+      border: 1px solid #cccccc
+      padding: 7px 11px
+      border-radius: 3px
+      &::placeholder
+        color: #cccccc
+    button
+      background-color: #4997D0
+      border-radius: 3px
+      padding: 8px
+      color: #ffffff
+      border: none
+      font-size: 13px
+      font-family: inherit
+  .RightBlock
+    width: 50%
+    margin-left: 15px
+    div
+      margin-bottom: 20px
+    .Date
+      font-size: 13px
+      color: #999999
+    .Comment
+      font-size: 13px
+      margin-top: 5px
+      margin-bottom: 0
+  .CloseBtn
+    padding: 0
+    height: 18px
+    width: 18px
+    border: none
+    background-color: transparent
+    &::after
+      display: inline-block
+      content: "\00d7"
+      font-size: 40px
+      line-height: 20px
+
+
