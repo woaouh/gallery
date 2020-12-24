@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import classes from './Card.module.sass';
 
-import { fetchBigImage } from '../../redux/gallerySlice';
+import { fetchBigImage, toggleModal } from '../../redux/gallerySlice';
 
 export default function Card({ id, url }) {
   const dispatch = useDispatch();
@@ -16,6 +16,7 @@ export default function Card({ id, url }) {
   }, [bigImage, dispatch, id]);
 
   function onCardClickHandler() {
+    dispatch(toggleModal());
     setBigImage(id);
   }
   return (

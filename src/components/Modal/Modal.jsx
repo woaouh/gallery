@@ -5,14 +5,14 @@ import classes from './Modal.module.sass';
 
 import Loader from '../Loader/Loader';
 
-import { closeModal } from '../../redux/gallerySlice';
+import { toggleModal } from '../../redux/gallerySlice';
 
 export default function Modal() {
   const dispatch = useDispatch();
   const imageUrl = useSelector(({ gallery }) => gallery.bigImage);
 
   function onCloseModalHandler() {
-    dispatch(closeModal());
+    dispatch(toggleModal());
   }
   return (
     <dialog className={classes.Modal}>

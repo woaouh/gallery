@@ -29,8 +29,8 @@ export const gallerySlice = createSlice({
   name: 'gallery',
   initialState,
   reducers: {
-    closeModal(state) {
-      state.isModalOpen = false;
+    toggleModal(state) {
+      state.isModalOpen = !state.isModalOpen;
     },
   },
   extraReducers: {
@@ -60,6 +60,6 @@ export const gallerySlice = createSlice({
   },
 });
 
-export const { closeModal } = gallerySlice.actions;
+export const { toggleModal } = gallerySlice.actions;
 
 export default gallerySlice.reducer;
