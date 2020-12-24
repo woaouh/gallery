@@ -16,12 +16,12 @@ export default function Card({ id, url }) {
   }, [bigImage, dispatch, id]);
 
   function onCardClickHandler() {
-    dispatch(toggleModal());
     setBigImage(id);
+    dispatch(toggleModal());
   }
   return (
     <div className={classes.Card} onClick={onCardClickHandler} onKeyUp={onCardClickHandler} role="button" tabIndex="0">
-      <img src={url} alt={id} id={id} />
+      <img src={url} alt="gallery content" />
     </div>
   );
 }

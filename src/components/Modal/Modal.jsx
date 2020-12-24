@@ -10,6 +10,7 @@ import { toggleModal } from '../../redux/gallerySlice';
 export default function Modal() {
   const dispatch = useDispatch();
   const imageUrl = useSelector(({ gallery }) => gallery.bigImage);
+  const bigImageStatus = useSelector(({ gallery }) => gallery.bigImageStatus);
 
   function onCloseModalHandler() {
     dispatch(toggleModal());
@@ -18,7 +19,7 @@ export default function Modal() {
     <dialog className={classes.Modal}>
       <div className={classes.LeftBlock}>
         <div className={classes.ImageContainer}>
-          {imageUrl ? <img src={imageUrl} alt="gallery content" /> : <Loader />}
+          {bigImageStatus === 'succeeded' ? <img src={imageUrl} alt="gallery content" /> : <Loader />}
         </div>
         <form name="comment-form">
           <input type="text" name="name" placeholder="Your name" />
