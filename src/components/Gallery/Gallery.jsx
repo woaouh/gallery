@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import classes from './Gallery.module.sass';
-import { Card } from '../Card/Card';
+import Card from '../Card/Card';
 
-export function Gallery() {
+export default function Gallery() {
   const images = useSelector(({ gallery }) => gallery.images);
   return (
     <section className={classes.Gallery}>

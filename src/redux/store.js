@@ -4,5 +4,5 @@ import galleryReducer from './gallerySlice';
 export default configureStore({
   reducer: {
     gallery: galleryReducer,
-  }
+  },
 });

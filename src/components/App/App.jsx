@@ -1,16 +1,18 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classes from './App.module.sass';
 
-import { Backdrop } from '../Backdrop/Backdrop';
-import { Gallery } from '../Gallery/Gallery';
-import { Modal } from '../Modal/Modal';
+import Backdrop from '../Backdrop/Backdrop';
+import Gallery from '../Gallery/Gallery';
+import Modal from '../Modal/Modal';
+import Loader from '../Loader/Loader';
 
 import { fetchImages } from '../../redux/gallerySlice';
 
-export function App() {
+export default function App() {
   const dispatch = useDispatch();
   const isModalOpen = useSelector(({ gallery }) => gallery.isModalOpen);
+  const status = useSelector(({ gallery }) => gallery.status);
 
   useEffect(() => {
     dispatch(fetchImages());
@@ -21,7 +23,7 @@ export function App() {
       <h1>Photo Gallery</h1>
       {isModalOpen && <Backdrop />}
       {isModalOpen && <Modal />}
-      <Gallery />
+      {status === 'loading' ? <Loader /> : <Gallery />}
     </main>
   );
 }
