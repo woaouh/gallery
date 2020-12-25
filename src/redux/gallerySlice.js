@@ -25,6 +25,18 @@ export const fetchBigImage = createAsyncThunk('gallery/fetchBigImage', async (id
   return result;
 });
 
+export const postComment = createAsyncThunk('gallery/postComment', async (config) => {
+  const response = await fetch(`${URL}/${config.id}/comments`, {
+    method: 'POST',
+    body: JSON.stringify(config.body),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const result = await response.json();
+  return result;
+});
+
 export const gallerySlice = createSlice({
   name: 'gallery',
   initialState,
@@ -51,7 +63,7 @@ export const gallerySlice = createSlice({
     },
     [fetchBigImage.fulfilled]: (state, action) => {
       state.bigImageStatus = 'succeeded';
-      state.bigImage = action.payload.url;
+      state.bigImage = action.payload;
     },
     [fetchBigImage.rejected]: (state, action) => {
       state.bigImageStatus = 'failed';

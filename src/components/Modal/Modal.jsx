@@ -6,37 +6,27 @@ import classes from './Modal.module.sass';
 import Loader from '../Loader/Loader';
 
 import { toggleModal } from '../../redux/gallerySlice';
+import Form from '../Form/Form';
+import CommentsList from '../CommentsList/CommentsList';
 
 export default function Modal() {
   const dispatch = useDispatch();
-  const imageUrl = useSelector(({ gallery }) => gallery.bigImage);
+  const imageUrl = useSelector(({ gallery }) => gallery.bigImage.url);
   const bigImageStatus = useSelector(({ gallery }) => gallery.bigImageStatus);
 
   function onCloseModalHandler() {
     dispatch(toggleModal());
   }
+
   return (
     <dialog className={classes.Modal}>
       <div className={classes.LeftBlock}>
         <div className={classes.ImageContainer}>
           {bigImageStatus === 'succeeded' ? <img src={imageUrl} alt="gallery content" /> : <Loader />}
         </div>
-        <form name="comment-form">
-          <input type="text" name="name" placeholder="Your name" />
-          <input type="text" name="comment" placeholder="Your comment" />
-          <button type="button">Leave a comment</button>
-        </form>
+        <Form />
       </div>
-      <div className={classes.RightBlock}>
-        <div>
-          <span className={classes.Date}>18.12.2019</span>
-          <p className={classes.Comment}>Nice photo</p>
-        </div>
-        <div>
-          <span className={classes.Date}>18.12.2019</span>
-          <p className={classes.Comment}>I was there!</p>
-        </div>
-      </div>
+      <CommentsList />
       <button className={classes.CloseBtn} onClick={onCloseModalHandler} type="button" />
     </dialog>
   );
