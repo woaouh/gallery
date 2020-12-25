@@ -13,6 +13,7 @@ export default function Form() {
     e.preventDefault();
     const body = { id: imageId, body: form };
     dispatch(postComment(body));
+    setForm({ name: '', comment: '' });
   }
 
   function onChangeHandler({ target }) {
@@ -21,8 +22,8 @@ export default function Form() {
 
   return (
     <form name="comment-form" className={classes.Form} onSubmit={onSubmitHandler}>
-      <input type="text" name="name" placeholder="Your name" onChange={onChangeHandler} />
-      <input type="text" name="comment" placeholder="Your comment" onChange={onChangeHandler} />
+      <input type="text" name="name" value={form.name} placeholder="Your name" onChange={onChangeHandler} />
+      <input type="text" name="comment" value={form.comment} placeholder="Your comment" onChange={onChangeHandler} />
       <button type="submit">Leave a comment</button>
     </form>
   );
