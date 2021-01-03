@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/903620390381de1be9c0/maintainability)](https://codeclimate.com/github/woaouh/gallery/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/903620390381de1be9c0/maintainability)](https://codeclimate.com/github/woaouh/gallery/maintainability) [![ESLint](https://github.com/woaouh/dozzy-pizza/workflows/ESLint/badge.svg)](https://github.com/woaouh/dozzy-pizza/actions)
 
 # Test task for Front end developer from Avito
 
