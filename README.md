@@ -2,7 +2,8 @@
 
 # Test task for Front end developer from Avito
 
-*To run the project locally:*
+_To run the project locally:_
+
 ```
 $ make install
 $ make start
@@ -12,7 +13,7 @@ $ make start
 
 This project as a test task has been implemented by me and reviewed by Front end community from the internet.
 
-The project has only one page with thumbnail images fetched from DB. 
+The project has only one page with thumbnail images fetched from DB.
 
 You can click on any image and a modal window will be opened.
 
@@ -20,5 +21,5 @@ In the modal window are three blocks: image, form and comments list. In the imag
 
 ## Links
 
-* [Test task](https://github.com/avito-tech/safedeal-frontend-trainee)
-* [Live project](https://zealous-minsky-ae133a.netlify.app)
+- [Test task](https://github.com/avito-tech/safedeal-frontend-trainee)
+- [Live project](https://zealous-minsky-ae133a.netlify.app)
