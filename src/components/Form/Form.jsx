@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import classes from './Form.module.sass';
+import classes from './Form.module.scss';
 
 import { postComment } from '../../redux/gallerySlice';
 
@@ -21,7 +21,7 @@ export default function Form() {
   }
 
   return (
-    <form name="comment-form" className={classes.Form} onSubmit={onSubmitHandler}>
+    <form name="comment-form" className={classes.form} onSubmit={onSubmitHandler}>
       <input type="text" name="name" value={form.name} placeholder="Your name" onChange={onChangeHandler} />
       <input type="text" name="comment" value={form.comment} placeholder="Your comment" onChange={onChangeHandler} />
       <button type="submit">Leave a comment</button>

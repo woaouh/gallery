@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import classes from './Modal.module.sass';
+import classes from './Modal.module.scss';
 
 import Loader from '../Loader/Loader';
 
@@ -19,15 +19,15 @@ export default function Modal() {
   }
 
   return (
-    <dialog className={classes.Modal}>
-      <div className={classes.LeftBlock}>
-        <div className={classes.ImageContainer}>
+    <dialog className={classes.modal}>
+      <div className={classes.left_block}>
+        <div className={classes.image_container}>
           {bigImageStatus === 'succeeded' ? <img src={imageUrl} alt="gallery content" /> : <Loader />}
         </div>
         <Form />
       </div>
       <CommentsList />
-      <button className={classes.CloseBtn} onClick={onCloseModalHandler} type="button" />
+      <button className={classes.close_btn} onClick={onCloseModalHandler} type="button" />
     </dialog>
   );
 }

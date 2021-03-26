@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './CommentsList.module.sass';
+import classes from './CommentsList.module.scss';
 
 const mockComments = [
   { date: '18.12.2019', comment: 'Nice photo', id: 267 },
@@ -8,11 +8,11 @@ const mockComments = [
 
 export default function CommentsList() {
   return (
-    <div className={classes.CommentsList}>
+    <div className={classes.comments}>
       {mockComments.map((comment) => (
         <div key={comment.id}>
-          <span className={classes.Date}>{comment.date}</span>
-          <p className={classes.Comment}>{comment.comment}</p>
+          <span className={classes.date}>{comment.date}</span>
+          <p className={classes.comment}>{comment.comment}</p>
         </div>
       ))}
     </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import classes from './Gallery.module.sass';
+import classes from './Gallery.module.scss';
 
 import Card from '../Card/Card';
 
@@ -22,7 +22,7 @@ export default function Gallery() {
     dispatch(toggleModal());
   }
   return (
-    <section className={classes.Gallery}>
+    <section className={classes.gallery}>
       {images.map((image) => (
         <Card key={image.id} url={image.url} id={image.id} onClickHandler={onCardClickHandler} />
       ))}

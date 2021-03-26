@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import classes from './App.module.sass';
+import classes from './App.module.scss';
 
 import Backdrop from '../Backdrop/Backdrop';
 import Gallery from '../Gallery/Gallery';
@@ -19,7 +19,7 @@ export default function App() {
   }, [dispatch]);
 
   return (
-    <main className={classes.App}>
+    <main className={classes.app}>
       <h1>Photo Gallery</h1>
       {isModalOpen && <Backdrop />}
       {isModalOpen && <Modal />}

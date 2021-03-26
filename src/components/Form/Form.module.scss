@@ -1,0 +1,26 @@
+.form {
+  height: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+  max-height: 111px;
+
+  input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 7px 11px;
+
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+
+  button {
+    background-color: #4997d0;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    padding: 8px;
+  }
+}
