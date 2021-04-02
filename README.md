@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/903620390381de1be9c0/maintainability)](https://codeclimate.com/github/woaouh/gallery/maintainability) [![ESLint](https://github.com/woaouh/dozzy-pizza/workflows/ESLint/badge.svg)](https://github.com/woaouh/dozzy-pizza/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/903620390381de1be9c0/maintainability)](https://codeclimate.com/github/woaouh/gallery/maintainability) [![CI](https://github.com/woaouh/gallery/workflows/CI/badge.svg)](https://github.com/woaouh/gallery/actions) [![Netlify Status](https://api.netlify.com/api/v1/badges/6a421f4d-0098-4af2-b338-4e460aac9983/deploy-status)](https://app.netlify.com/sites/zealous-minsky-ae133a/deploys)
 
 # Test task for Front end developer from Avito
 
